@@ -17,6 +17,8 @@ public class EnnemiesController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed);
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
+
+  
 }
