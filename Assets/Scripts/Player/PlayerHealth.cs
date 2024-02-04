@@ -4,29 +4,26 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class PlayerHealth : PlayerController
+public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI healthPointText;
     private int hpPlayer;
- 
-    void Start()
-    {
-        
-    }
+    public GameObject playerDps;
     private void Awake()
     {
-        hpPlayer = Class.healthPoint;
+
+         hpPlayer = playerDps
     }
 
     void Update()
     {
-       healthPointText.text = ("HP: " + hpPlayer);
+        healthPointText.text = ("HP: " + hpPlayer);
         if (hpPlayer == 0)
         {
             Destroy(gameObject);
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.tag == "Ennemies")
         {
