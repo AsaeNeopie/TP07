@@ -12,10 +12,12 @@ public class EnnemiesController : MonoBehaviour
     public Rigidbody2D rigidbodyEnnemie;
     public EnemmiesClass Class;
     public int hpEnemie;
+    public int degats = 1;
 
     private void Awake()
     {
         hpEnemie = Class.healthPoint;
+        speed = Class.speed;
     }
 
     private void Start()
@@ -30,7 +32,7 @@ public class EnnemiesController : MonoBehaviour
     {
         if (other.tag == "Bullet")
         {
-            hpEnemie -- 2;
+            hpEnemie -= 2;
             Debug.Log(hpEnemie);
         }
         

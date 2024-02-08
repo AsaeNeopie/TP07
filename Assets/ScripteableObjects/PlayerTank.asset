@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 731e783f8b2d64043a2d23bedccac146, type: 3}
-  m_Name: PlayerCLass
+  m_Name: PlayerTank
   m_EditorClassIdentifier: 
-  speed: 6
-  healthPoint: 50
+  speed: 2
+  healthPoint: 100
