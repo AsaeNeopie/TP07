@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     private void Awake()
     {
 
-         hpPlayer = playerDps
+        //hpPlayer = playerDps;
     }
 
     void Update()

@@ -5,22 +5,42 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
- 
-    public GameObject bullletBasic;
-    public GameObject crossHair;
-    public int speedBullet;
-    
-    void BulletShoot()
+    //script fais a l'aide d'un tuto
+
+    private Camera mainCamera;
+    private Vector3 mousePos;
+    public GameObject bullet;
+    public Transform bulletTransform;
+    public bool canFire;
+    private float timer;
+    public float timeBeetwingFiring;
+
+    private void Start()
     {
-        Instantiate(bullletBasic, transform.position, transform.rotation);
-        Vector2 bulletVelocity = new Vector2(crossHair.transform.position.x - transform.position.x, crossHair.transform.position.y - transform.position.y);
-        
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 rotation = mousePos - transform.position;
+        float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, rotZ);
+
+        if (!canFire)
         {
-            BulletShoot();
+            timer += Time.deltaTime;
+            if(timer > timeBeetwingFiring) 
+            {
+                canFire = true;
+                timer = 0;
+            }
+        }
+
+        if (Input.GetMouseButton(0)&& canFire)
+        {
+            canFire = false;
+            Instantiate(bullet, bulletTransform.position, Quaternion.identity);
         }
     }
 }
