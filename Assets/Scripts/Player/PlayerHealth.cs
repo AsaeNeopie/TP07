@@ -8,11 +8,10 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI healthPointText;
     private int hpPlayer;
-    public GameObject playerDps;
+    public PlayerClass playerClass;
     private void Awake()
     {
-
-        //hpPlayer = playerDps;
+        hpPlayer = playerClass.healthPoint;
     }
 
     void Update()
@@ -23,12 +22,9 @@ public class PlayerHealth : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void OnTriggerStay2D(Collider2D other)
+
+    void ApplyDammages(int degatToPlayer)
     {
-        if (other.tag == "Ennemies")
-        {
-            Debug.Log("Touché");
-            hpPlayer -= 2;
-        }
+        hpPlayer -= degatToPlayer;
     }
 }

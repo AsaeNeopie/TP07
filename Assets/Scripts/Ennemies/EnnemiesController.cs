@@ -8,16 +8,17 @@ using UnityEngine;
 public class EnnemiesController : MonoBehaviour
 {
     public GameObject player;
-    public float speed;
+    private float speed;
     public Rigidbody2D rigidbodyEnnemie;
     public EnemmiesClass Class;
     public int hpEnemie;
-    public int degats = 1;
+    public int degatToPlayer;
 
     private void Awake()
     {
         hpEnemie = Class.healthPoint;
         speed = Class.speed;
+        degatToPlayer = Class.degats;
     }
 
     private void Start()
@@ -28,21 +29,26 @@ public class EnnemiesController : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
-    private void OnTriggerEnter2D(Collider2D other)
+   
+    private void Update()
+    {
+        if (hpEnemie == 0) 
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.tag == "Bullet")
         {
             hpEnemie -= 2;
             Debug.Log(hpEnemie);
         }
-        
-    }
 
-    private void Update()
-    {
-        if (hpEnemie == 0) 
+       if (other.tag == "Player")
         {
-            Destroy(gameObject);
+            player.SendMessage("ApplyDammages", degatToPlayer);
         }
     }
 }

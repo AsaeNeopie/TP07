@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4517682469358021002}
   - component: {fileID: 8077736290551802636}
-  - component: {fileID: 7332390272023577425}
   - component: {fileID: 3587930737564674433}
   - component: {fileID: 7603354688571353316}
+  - component: {fileID: 6507838490257297168}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Ennemies
@@ -87,22 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7332390272023577425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5130634650366544558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e0a20817d8975438f56b181d37450f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  speed: 1
-  rigidbodyEnnemie: {fileID: 0}
-  Class: {fileID: 11400000, guid: 213bbdc90cdc84441b45f699f5818e22, type: 2}
 --- !u!50 &3587930737564674433
 Rigidbody2D:
   serializedVersion: 4
@@ -175,6 +159,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6507838490257297168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5130634650366544558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3547171e585654c95680d8d62742e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ennemieClass: {fileID: 11400000, guid: 419ffc8251e154e42b10920abc178388, type: 2}
+  player: {fileID: 6166934716997737528, guid: d9e947dc514843d4da72b82a0ffffaea, type: 3}
 --- !u!1 &7307298339745891771
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,9 +274,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  speed: 1
   rigidbodyEnnemie: {fileID: 0}
   Class: {fileID: 11400000, guid: 213bbdc90cdc84441b45f699f5818e22, type: 2}
+  hpEnemie: 0
+  degatToPlayer: 0
 --- !u!50 &5102047963649930802
 Rigidbody2D:
   serializedVersion: 4
