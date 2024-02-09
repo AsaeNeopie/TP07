@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  destroyBullet: 3
 --- !u!1 &2122595695869653360
 GameObject:
   m_ObjectHideFlags: 0

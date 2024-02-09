@@ -6,4 +6,6 @@ public class PlayerClass : ScriptableObject
 {
     public float speed = 4;
     public int healthPoint = 50;
+    public float timeBeatwingShoot = 0.3f;
+    public int degats = 2;
 }

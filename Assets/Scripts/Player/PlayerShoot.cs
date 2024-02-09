@@ -14,6 +14,16 @@ public class PlayerShoot : MonoBehaviour
     public bool canFire;
     private float timer;
     public float timeBeetwingFiring;
+    public PlayerClass classOfPlayer;
+    public int degatsToEnnemie;
+
+    private void Awake()
+    {
+        timeBeetwingFiring = classOfPlayer.timeBeatwingShoot;
+        degatsToEnnemie = classOfPlayer.degats;
+    }
+
+
 
     private void Start()
     {

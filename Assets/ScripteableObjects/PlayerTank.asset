@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   healthPoint: 100
+  timeBeatwingShoot: 0.3
+  degats: 5

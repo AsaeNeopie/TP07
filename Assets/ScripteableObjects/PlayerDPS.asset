@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 731e783f8b2d64043a2d23bedccac146, type: 3}
   m_Name: PlayerDPS
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 8
   healthPoint: 50
+  timeBeatwingShoot: 0.8
+  degats: 1
