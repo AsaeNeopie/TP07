@@ -45,10 +45,5 @@ public class EnnemiesController : MonoBehaviour
             hpEnemie -= 2;
             Debug.Log(hpEnemie);
         }
-
-       if (other.tag == "Player")
-        {
-            player.SendMessage("ApplyDammages", degatToPlayer);
-        }
     }
 }

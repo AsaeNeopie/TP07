@@ -23,8 +23,9 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    void ApplyDammages(int degatToPlayer)
+    public void ApplyDammages(int degatToPlayer)
     {
         hpPlayer -= degatToPlayer;
+       
     }
 }
