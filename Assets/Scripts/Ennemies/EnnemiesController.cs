@@ -9,9 +9,9 @@ public class EnnemiesController : MonoBehaviour
 {
     public GameObject player;
     private float speed;
-    public Rigidbody2D rigidbodyEnnemie;
+    private Rigidbody2D rigidbodyEnnemie;
     public EnemmiesClass Class;
-    public int hpEnemie;
+    private int hpEnemie;
     public int degatToPlayer;
 
     private void Awake()
