@@ -10,7 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1940705582787916045, guid: f24ea8216f705b6458ad4f33dc29e718, type: 3}
       propertyPath: m_Name
-      value: Bullet
+      value: BulletBasic
+      objectReference: {fileID: 0}
+    - target: {fileID: 3106835245624998576, guid: f24ea8216f705b6458ad4f33dc29e718, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.76
       objectReference: {fileID: 0}
     - target: {fileID: 3106835245624998576, guid: f24ea8216f705b6458ad4f33dc29e718, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51,6 +55,18 @@ PrefabInstance:
     - target: {fileID: 3106835245624998576, guid: f24ea8216f705b6458ad4f33dc29e718, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572151199193603158, guid: f24ea8216f705b6458ad4f33dc29e718, type: 3}
+      propertyPath: m_Color.b
+      value: 0.98393774
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572151199193603158, guid: f24ea8216f705b6458ad4f33dc29e718, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572151199193603158, guid: f24ea8216f705b6458ad4f33dc29e718, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
