@@ -275,9 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6166934716997737528, guid: d9e947dc514843d4da72b82a0ffffaea, type: 3}
-  rigidbodyEnnemie: {fileID: 0}
   Class: {fileID: 11400000, guid: 213bbdc90cdc84441b45f699f5818e22, type: 2}
-  hpEnemie: 0
   degatToPlayer: 0
 --- !u!50 &5102047963649930802
 Rigidbody2D:

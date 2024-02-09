@@ -6,7 +6,6 @@ public class DamageToPlayer : MonoBehaviour
 {
     public EnemmiesClass ennemieClass;
     private int degatsToPlayer;
-    public GameObject player;
     public float recul;
     private void Awake()
     {
@@ -16,9 +15,9 @@ public class DamageToPlayer : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            print(other.name);
-            player.SendMessage("ApplyDammages", degatsToPlayer);
-            player.GetComponent<Rigidbody2D>().AddForce((transform.position-player.transform.position).normalized*recul);
+            other.GetComponent<PlayerHealth>().ApplyDammages(degatsToPlayer);
+
+            other.GetComponent<Rigidbody2D>().AddForce((transform.position-other.transform.position).normalized*recul);
         }
     }
 }
