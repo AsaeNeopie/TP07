@@ -1603,10 +1603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21159e7db965fe44bfc8677ac473fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnnemieASpawn:
-  - {fileID: 7307298339745891771, guid: 755958b4599f04a4391768dacdf9c853, type: 3}
-  - {fileID: 9143255238394447194, guid: 4c31ea321d5f0124aa955a697c874d86, type: 3}
-  - {fileID: 7057189924944771395, guid: 0432f6030dbb9bb4b8a3274be64710e7, type: 3}
+  ennemies: {fileID: 0}
 --- !u!4 &1736907452
 Transform:
   m_ObjectHideFlags: 0
@@ -1770,7 +1767,11 @@ PrefabInstance:
     - target: {fileID: 9019330148347832241, guid: d9e947dc514843d4da72b82a0ffffaea, type: 3}
       propertyPath: bullet
       value: 
-      objectReference: {fileID: 3252321100223252531, guid: 7cb26c39338e52e43a652dac1e765577, type: 3}
+      objectReference: {fileID: 1940705582787916045, guid: f24ea8216f705b6458ad4f33dc29e718, type: 3}
+    - target: {fileID: 9019330148347832241, guid: d9e947dc514843d4da72b82a0ffffaea, type: 3}
+      propertyPath: degatsToEnnemie
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
